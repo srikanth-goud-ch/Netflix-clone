@@ -17,5 +17,10 @@ spec:
       containers:
       - name: netflix-app
         image: sevenajay/netflix:latest
+        automountServiceAccountToken: false
+        resources:
+         limits:
+          cpu: 0.5
+          memory: 200Mi 
         ports:
         - containerPort: 80
